@@ -19,8 +19,7 @@ public class PlayerController : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody>();
 	}
-
-
+	
 	void FixedUpdate(){
 
 		float moveHorizontal = Input.GetAxis("Horizontal");
@@ -28,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 
 
 		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
 		rb.velocity = movement * speed;
 
 		rb.position = new Vector3
